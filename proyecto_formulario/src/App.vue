@@ -21,60 +21,56 @@
 
     <!-- AQUI INICIO FORMULARIOOOOOOO -->
     <b-form @submit="onSubmit" @reset="onReset" v-if="show" class="form-container">
-      <!-- Nombre -->
       <b-form-group
         id="input-group-1"
-        label="Nombre completo:"
+        label="Full name:"
         label-for="input-1"
         :state="!isValid('name')"
       >
         <b-form-input
           id="input-1"
           v-model="form.name"
-          placeholder="Nombre"
+          placeholder="Name"
           required
         ></b-form-input>
-        <div class="invalid-feedback">Por favor, ingrese su nombre.</div>
+        <div class="invalid-feedback">Please, enter your name</div>
       </b-form-group>
 
-      <!-- Apellido Paterno -->
       <b-form-group
         id="input-group-2"
-        label="Apellido Paterno:"
+        label="Lastname:"
         label-for="input-2"
         :state="!isValid('surname')"
       >
         <b-form-input
           id="input-2"
           v-model="form.surname"
-          placeholder="Apellido Paterno"
+          placeholder="Lastname"
           required
         ></b-form-input>
         <div class="invalid-feedback">
-          Por favor, ingrese su apellido paterno.
+          Please, enter your lastname.
         </div>
       </b-form-group>
 
-      <!-- Dirección -->
       <b-form-group
         id="input-group-4"
-        label="Dirección (CP, Calle, número, Ciudad):"
+        label="Address (CP, street, number, City):"
         label-for="input-4"
         :state="!isValid('address')"
       >
         <b-form-input
           id="input-4"
           v-model="form.address"
-          placeholder="Dirección"
+          placeholder="Address"
           required
         ></b-form-input>
-        <div class="invalid-feedback">Por favor, ingrese su dirección.</div>
+        <div class="invalid-feedback">Please, enter your own address.</div>
       </b-form-group>
 
-      <!-- Fecha de nacimiento -->
       <b-form-group
         id="input-group-5"
-        label="Fecha de nacimiento:"
+        label="Birthday:"
         label-for="input-5"
         :state="!isValid('birthDate')"
       >
@@ -84,13 +80,12 @@
           type="date"
           required
         ></b-form-input>
-        <div class="invalid-feedback">Debe tener al menos 18 años.</div>
+        <div class="invalid-feedback">You almost have 18 years.</div>
       </b-form-group>
 
-      <!-- Correo electrónico -->
       <b-form-group
         id="input-group-6"
-        label="Correo electrónico:"
+        label="Email:"
         label-for="input-6"
         :state="!isValid('email')"
       >
@@ -98,18 +93,17 @@
           id="input-6"
           v-model="form.email"
           type="email"
-          placeholder="Correo electrónico"
+          placeholder="Email"
           required
         ></b-form-input>
         <div class="invalid-feedback">
-          Por favor, ingrese un correo electrónico válido.
+          Please, enter a valid email.
         </div>
       </b-form-group>
 
-      <!-- Número telefónico -->
       <b-form-group
         id="input-group-7"
-        label="Número telefónico:"
+        label="Phone Number:"
         label-for="input-7"
         :state="!isValid('phoneNumber')"
       >
@@ -117,18 +111,17 @@
           id="input-7"
           v-model="form.phoneNumber"
           type="tel"
-          placeholder="Número telefónico"
+          placeholder="Phone number"
           required
         ></b-form-input>
         <div class="invalid-feedback">
-          Por favor, ingrese un número telefónico válido.
+          Please, enter a valid phone number.
         </div>
       </b-form-group>
 
-      <!-- Fotografía -->
       <b-form-group
         id="input-group-8"
-        label="Fotografía (PNG):"
+        label="Image (PNG):"
         label-for="input-8"
         :state="!isValid('photo')"
       >
@@ -139,12 +132,12 @@
           required
         ></b-form-file>
         <div class="invalid-feedback">
-          Por favor, cargue una fotografía en formato PNG (menos de 3 MB).
+          Please, upload an image in PNG format(less than 3gb).
         </div>
       </b-form-group>
 
-      <b-button type="submit" variant="primary">Enviar</b-button>
-      <b-button type="reset" variant="danger">Restablecer</b-button>
+      <b-button type="submit" variant="primary">Send</b-button>
+      <b-button type="reset" variant="danger">Restore</b-button>
     </b-form>
   </div>
 </template>
